@@ -1,31 +1,22 @@
-*{
-
-padding: 0px;
-margin: 0px;
-
-
-
+* {
+  padding: 0px;
+  margin: 0px;
+  overflow: hidden;
 }
 
-
-
-
 .Cielo {
-    position: relative;
+  position: relative;
   height: 450px;
-  width: 1024px;
+  width: 1536px;
   background-image: url(Imagen/back.png);
   margin: auto;
-  display: flex; 
-  align-items: center; 
-  justify-content: center; 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: 100px;
   overflow: hidden;
-  animation-name: Cielo1;
-  animation-duration: 10s;
-  animation-iteration-count: infinite;
-  animation-timing-function: linear;
-  animation-direction: alternate;
-
+  background-repeat: repeat-x;
+  animation: mov1 90s linear infinite;
 }
 
 .Cielo img {
@@ -34,56 +25,67 @@ margin: 0px;
   background-size: contain;
 }
 
-.montañas{
-
-position: relative;
-width: 1024px;
-height: 350px;
-padding-bottom: 100px;
-background-image: url(Imagen/middle.png);
-margin-top: -350px;
-top: 100px;
-z-index: 2;
-animation-name: Montaña1;
-animation-duration: 30s;
-animation-iteration-count: infinite;
-
-
+.montañas {
+  position: relative;
+  width: 1536px;
+  height: 350px;
+  padding-bottom: 100px;
+  background-image: url(Imagen/middle.png);
+  margin-top: -350px;
+  top: 250px;
+  z-index: 2;
+  overflow: hidden;
+  background-repeat: repeat-x;
+  animation: mov2 60s linear infinite;
 }
 
-
-.Piso{
-
-position: relative;
-width: 1024px;
-height: 285px;
-background-color: transparent;
-background-image: url(Imagen/front.png);
-margin-top: -150px;
-z-index: 3;
-overflow: hidden;
-background-position: center bottom;
-animation-name: Piso1;
-animation-duration: 30s;
-animation-iteration-count: infinite;
-
+.Piso {
+  position: relative;
+  width: 1229px;
+  height: 285px;
+  background-color: transparent;
+  background-image: url(Imagen/front.png);
+  overflow: hidden;
+  background-size: contain;
+  top: -72px;
+  scale: 1.5;
+  z-index: 3;
+  overflow: hidden;
+  background-repeat: repeat-x;
+  animation: mov3 60s linear infinite;
 }
 
-
-.Mario{
-
-    position: relative;
-    top: 180px;
-    right: 220px;
-    text-align: center;
-
+.Mario {
+  position: relative;
+  top: 50px;
+  right: 240px;
+  text-align: center;
+  scale: 0.3;
 }
 
-@keyframes Cielo1 {
-
-   0%{transform: translate(0px);}
-   50%{transform: translate(-1050px);}
-   100%{transform: translate(-1050px);}
-
+@keyframes mov1 {
+  from {
+    background-position: 0px 0px;
+  }
+  to {
+    background-position: -1000px 0px;
+  }
 }
 
+@keyframes mov2 {
+  from {
+    background-position: 0px 0px;
+  }
+  to {
+    background-position: -1000px 0px;
+  }
+}
+
+@keyframes mov3 {
+  from {
+    background-position: 0px 0px;
+  }
+  to {
+    background-position: -1000px 0px;
+  }
+}
